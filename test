@@ -1,0 +1,45 @@
+function fizzBuzz(max) {
+  let result = ''
+
+  for (let i = 1; i <= max; i++) {
+    if (i % 3 === 0 && i % 5 === 0) { 
+        result += 'FizzBuzz'
+    } else if (i % 3 === 0) {
+        result += 'Fizz'
+    } else if (i % 5 === 0) {
+        result += 'Buzz'
+    } else {
+        result += i
+    }
+  }
+  return result
+}
+
+module.exports = fizzBuzz
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+const { template } = require('@babel/core')
+
+function totalPages(arrayItems, rowsPerPage) {
+  if (arrayItems === null || arrayItems === undefined) {
+    return undefined
+  }
+  if (rowsPerPage === null || rowsPerPage === undefined || rowsPerPage === 0) {
+    return 1
+  }
+
+  // ในหนึ่งหน้าจะกำหนด rowsPerPage ว่าสามารถเก็บ arrayItems ได้เท่าไหร่ >> แล้วคำนวณหาจำนวน page
+  // ใช้ Math.ceil เนื่องจากต้องปัดขึ้นไม่งั้น arrayItems ที่เหลือก็จะไม่รู้ว่าจะไปเก็บที่ไหนถ้าใช้ Math.floor
+  let page = Math.ceil(arrayItems.length / rowsPerPage)
+  return page
+}
+
+const items = null
+const perPage = 20
+const page = totalPages(items, perPage)
+console.log(page) 
+
+module.exports = totalPages
