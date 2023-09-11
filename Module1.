@@ -1,0 +1,116 @@
+const { template } = require('@babel/core')
+
+// 65130500090 นางสาวอินทร์ริตา วราจิรวิโรจน์
+function countCovidStatus(covidStatusArray) {
+  if (covidStatusArray === null || covidStatusArray === undefined) {
+    return undefined
+  }
+  if (covidStatusArray.length === 0) {
+    return {}
+  }
+
+  let negativeLow = 0
+  let negativeHigh = 0
+  let positive = 0
+
+  for (let status of covidStatusArray) { // for..of ใช้ใน array
+    if (status === 'negative and low risk') {
+      negativeLow++
+    } else if (status === 'negative and high risk') {
+      negativeHigh++
+    } else if (status === 'positive') {
+      positive++
+    }
+
+  ใช้ if-else or switch ก็ได้
+   // switch (status) {
+    //     case 'negative and low risk' :
+    //       negativeLow++
+    //       break
+    //     case 'negative and high risk' :
+    //       negativeHigh++
+    //       break
+    //     case 'positive' :
+    //       positive++
+    //       break
+    // }
+  }
+
+  let covidStatus = {}
+  if (negativeLow > 0) covidStatus['negative and low risk'] = negativeLow
+  if (negativeHigh > 0) covidStatus['negative and high risk'] = negativeHigh
+  if (positive > 0) covidStatus['positive'] = positive
+  return covidStatus
+}
+
+let status = ['negative and low risk', 'negative and low risk', 'negative and low risk']
+let covidStatus = countCovidStatus(status)
+console.log(covidStatus) // { 'negative and low risk': 3 }
+
+module.exports = countCovidStatus
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+const { template } = require('@babel/core')
+
+function countPosNegValue(posNegIntegerArray) {
+    if (posNegIntegerArray === null || posNegIntegerArray === undefined) {
+        return undefined
+    }
+    if (posNegIntegerArray.length === 0) {
+        return {}
+    }
+
+    let length = posNegIntegerArray.length
+    let positiveCount = 0
+    let negativeCount = 0
+
+    for (let i = 0; i < length; i++) {
+        if (posNegIntegerArray[i] > 0) { // ลูปเลขออกมาได้ค่าบวกเก็บค่าใน -> positiveCount
+            positiveCount++ 
+        } else if (posNegIntegerArray[i] < 0) { // ลูปเลขออกมาได้ค่าลบก็บค่าใน -> negativeCount
+            negativeCount++
+        }
+    }
+
+    let countInteger = {}
+    if (positiveCount >= 0) countInteger['positive'] = positiveCount
+    if (negativeCount >= 0) countInteger['negative'] = negativeCount
+    return countInteger
+
+}
+module.exports = countPosNegValue
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+const { template } = require('@babel/core')
+
+function getItemsOfCurrentPage(allItems, currentPage, rowsPerPage) {
+  if (allItems === null || allItems === undefined) return undefined
+  if (allItems.length === 0) return [] 
+  if (rowsPerPage <= 0) return allItems
+  if (currentPage <= 0) return allItems
+
+  // allItems จำนวน item ที่เก็บไว้ทั้งหมด
+  // currentPage หน้าปัจจุบันที่เปิดอยู่จะแสดง item อะไรบ้าง
+  // rowsPerPage จำนวนที่เก็บ item ได้สูงสุดต่อ 1 หน้า
+
+  const itemsOfCurrentPages = allItems.slice(rowsPerPage*(currentPage-1),rowsPerPage*currentPage)
+  // มี allItems 20 item นำมา slice ตัดมาโชว์ว่า CurrentPage จะมี item อะไรอยู่บ้าง
+  // มี rowsPerPage 10
+  // CurrentPage 2
+  if (itemsOfCurrentPages.length > 0) {return itemsOfCurrentPages}
+  if (itemsOfCurrentPages.length < 0) {return []} 
+  // return itemsOfCurrentPages.length>0?itemsOfCurrentPages:[] 
+  return itemsOfCurrentPages
+  // return itemsOfCurrentPages ถ้า > 0 
+  // return [] ถ้า < 0
+  
+}
+module.exports = getItemsOfCurrentPage
+
+
