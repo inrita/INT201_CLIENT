@@ -1,0 +1,31 @@
+git clone [link repo]
+----------------------------
+
+git status สถานะ
+git remote -v
+git add .
+git commit -m "ชื่อจ้าา"
+git push -u origin main
+
+git push origin:eye
+git push eye main
+----------------------------
+
+$git config --global --list #แสดงคุณสมบัติของ Git ทั้งหมด
+$git config --list          #แสดงคุณสมบัติของ Git เฉพาะ Repository นั้น
+
+$git config --global user.name "Your Name"           #กำหนดชื่อผู้ใช้
+$git config --global user.email "example@email.com"  #กำหนดอีเมล์ของผู้ใช้
+$git config --global --list #ตรวจสองอีกครั้งหลังจากกำหนดค่าเสร็จแล้ว
+----------------------------
+
+$git remote add origin <URL> #เพิ่ม Remote Repository ชื่อ origin 
+$git remote add origin https://github.com/NewGame0/Android_HelloWorld.git 
+#เพิ่ม Remote Repository ใหม่ชื่อ origin
+$git remote set-url origin <New URL>
+$git remote -v      #แสดง Remote Repository
+$git config --list  #แสดงคุณสมบัติต่างๆของ Git ซึ่งจะมี Remote Repository แสดงออกมาด้วย
+----------------------------
+
+$git init เป็นคำสั่งที่ใช้สร้างระบบของ Git ขึ้นมาภายใต้โฟลเดอร์หรือ Path นั้น โดยจะสร้างโฟลเดอร์ .git ขึ้นมาเพื่อใช้เก็บ สำรองข้อมูล การเปลี่ยนแปลงและคุณสมบัติอื่นๆ ของ Git
+----------------------------
