@@ -17,6 +17,9 @@ $git config --list          #แสดงคุณสมบัติของ Gi
 $git config --global user.name "Your Name"           #กำหนดชื่อผู้ใช้
 $git config --global user.email "example@email.com"  #กำหนดอีเมล์ของผู้ใช้
 $git config --global --list #ตรวจสองอีกครั้งหลังจากกำหนดค่าเสร็จแล้ว
+
+user.name=Inrita Warajirawiroj
+user.email=inrita.wara@kmutt.ac.th
 ----------------------------
 
 $git remote add origin <URL> #เพิ่ม Remote Repository ชื่อ origin 
