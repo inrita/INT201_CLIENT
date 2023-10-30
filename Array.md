@@ -39,10 +39,10 @@ forEach, filter, map, find, findIndex, reduce
 ---
 
 ## รายละเอียดเพิ่มเติม
-push() : **returns the new length (add)**
-find() : **findAuthor(_firstname, lastname_)**
-slice(1) : returns array of all authors except the first author **(ไม่เอาคนแรก)**
-splice() : returns a remove
+- push() : **returns the new length (add)**
+- find() : **findAuthor(_firstname, lastname_)**
+- slice(1) : returns array of all authors except the first author **(ไม่เอาคนแรก)**
+- splice() : returns a remove
 
-return this.authors[0] ?? undefined : **returns the first**
-return this.bookMarks[this.bookMarks.length-1] ?? undefined : **returns the last**
+- return this.authors[0] ?? undefined : **returns the first**
+- return this.bookMarks[this.bookMarks.length-1] ?? undefined : **returns the last**
