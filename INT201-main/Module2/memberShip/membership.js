@@ -16,13 +16,13 @@ class Membership {
  }
  subscribe(name){
   if(this.findMemberName(name)===-1){
-   return this.members.push({ memberId: Membership.autoId++, memberName: name })
+   return this.members.push({ memberId: Membership.autoId++, memberName: name }) //add
   } return -1
  }
  unsubscribe(id){
   if(this.findMemberId(id)===-1){
    return -1
-  } this.members.splice(this.findMemberId(id),1)
+  } this.members.splice(this.findMemberId(id),1) //remove
   return id
 
  }
