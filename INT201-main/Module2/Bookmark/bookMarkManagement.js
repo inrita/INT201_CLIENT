@@ -13,11 +13,11 @@ class BookMark{
     } else return this.bookMarks.push(pageNumber)
   }
   removeBookMark(pageNumber){
-    if (this.bookMarks.includes(pageNumber)) {
-      this.bookMarks = this.bookMarks.filter((item) => item !== pageNumber)
+    if (this.bookMarks.includes(pageNumber)) { //ดูว่ามีหรือไม่มี
+      this.bookMarks = this.bookMarks.filter((item) => item !== pageNumber) //ถ้ามีก็ใช้ filter ในการลบออก
       return pageNumber
    } else {
-      return undefined
+      return undefined //ถ้าไม่มี
    }
   }
   goToFirstBookMark(){
