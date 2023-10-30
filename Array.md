@@ -44,5 +44,6 @@ forEach, filter, map, find, findIndex, reduce
 - slice(1) : returns array of all authors except the first author **(ไม่เอาคนแรก)**
 - splice(), filter(), find() : returns a remove
 
+- remove all products in products array : splice(0, product.length)
 - return this.authors[0] ?? undefined : **returns the first**
 - return this.bookMarks[this.bookMarks.length-1] ?? undefined : **returns the last**
