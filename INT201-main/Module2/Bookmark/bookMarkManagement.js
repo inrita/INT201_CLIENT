@@ -13,13 +13,12 @@ class BookMark{
     } else return this.bookMarks.push(pageNumber)
   }
   removeBookMark(pageNumber){
-    let page = this.bookMarks.findIndex(a=>a===pageNumber)
-    if(page===-1){
-      return undefined
-    } else{
-      this.bookMarks.splice(page,1)
+    if (this.bookMarks.includes(pageNumber)) {
+      this.bookMarks = this.bookMarks.filter((item) => item !== pageNumber)
       return pageNumber
-    }
+   } else {
+      return undefined
+   }
   }
   goToFirstBookMark(){
     return this.bookMarks[0]??undefined
