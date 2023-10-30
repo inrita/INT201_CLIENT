@@ -11,9 +11,9 @@
 
 ## Stack and Queue Methods
 - push() : เพิ่มท้าย array (return new length)
-- pop() : ลบท้าย array (return new length)
+- pop() : ลบท้าย array (return ตัวที่ลบออกไป)
 - unshift() : เพิ่มต้น array (return new length)
-- shift() : ลบต้น array (return new length)
+- shift() : ลบต้น array (return ตัวที่ลบออกไป)
 ---
 
 ## Subarray Methods
