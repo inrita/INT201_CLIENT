@@ -42,7 +42,7 @@ forEach, filter, map, find, findIndex, reduce
 - push() : **returns the new length (add)**
 - find() : **findAuthor(_firstname, lastname_)**
 - slice(1) : returns array of all authors except the first author **(ไม่เอาคนแรก)**
-- splice() : returns a remove
+- splice(), filter(), find() : returns a remove
 
 - return this.authors[0] ?? undefined : **returns the first**
 - return this.bookMarks[this.bookMarks.length-1] ?? undefined : **returns the last**
