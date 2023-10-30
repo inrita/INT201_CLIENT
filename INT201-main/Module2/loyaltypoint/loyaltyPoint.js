@@ -11,6 +11,7 @@ class LoyaltyPoint {
     calculatePoints(purchaseAmount){
         let point = Math.floor(purchaseAmount/25)
         this.points = this.points+=point
+        // this.points = this.points + point
         return this.points
     }
 
@@ -19,6 +20,7 @@ class LoyaltyPoint {
         let cash = Math.floor(redeemPoints/800)
         let redeem = cash*800
         let current = this.points-=redeem
+        // this.points = this.points + redeem
         this.points = current
         return {
             memberId: this.memberId,
