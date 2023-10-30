@@ -35,10 +35,10 @@
 ---
 
 ## Method ที่ใช้ arrow =>
-**forEach, filter, map, find, findIndex, reduce**
+forEach, filter, map, find, findIndex, reduce
 ---
 
-### รายละเอียดเพิ่มเติม
+## รายละเอียดเพิ่มเติม
 push() : **returns the new length (add)**
 find() : **findAuthor(_firstname, lastname_)**
 slice(1) : returns array of all authors except the first author **(ไม่เอาคนแรก)**
