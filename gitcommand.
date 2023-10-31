@@ -14,6 +14,10 @@ git push -u origin main
 
 git push origin:eye
 git push eye main
+
+ถ้า push ไม่ขึ้นดู branch
+git branch ดูว่าอยู่ใน branch ไหน
+git branch
 ----------------------------
 
 $git config --global --list #แสดงคุณสมบัติของ Git ทั้งหมด
