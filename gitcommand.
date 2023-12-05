@@ -1,7 +1,18 @@
 Credential Manager
 -> Windows Credential
 -> ดูตรง githup กด remove
+----------------------------
 
+ขั้นตอบการสอบ LAB
+เข้า githup
+สร้าง folder หน้า desktop
+เข้า vs code open ไฟล์ที่สร้างไว้หน้า desktop
+git clone [link repo]
+git add .
+git commit -m ""
+git push
+
+----------------------------
 
 git clone [link repo]
 ----------------------------
