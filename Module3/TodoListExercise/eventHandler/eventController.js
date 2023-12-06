@@ -54,7 +54,7 @@ const addButtonHandler = (todoId) => {
     document
         .getElementById(todoId)
         .children[2].addEventListener('click', removeButtonHandler)
-    document.querySelector('input').value = ''
+    document.querySelector('input').value = '' //เมื่อพิมพ์เสร็จให้ input ว่างเหมือนเดิม
 }
 
 // ปุ่ม Not done
@@ -69,7 +69,7 @@ const notDoneButtonHandler = (event) => {
 // ออกแบบปุ่ม done 
 const setdoneStyle = (doneButtonFire) => {
     doneButtonFire.textContent = 'Done'
-    doneButtonFire.style = 'background-color: green;color: white'
+    doneButtonFire.style = 'background-color: green; color: white'
 }
 
 // ปุ่ม remove
@@ -84,13 +84,13 @@ const removeButtonHandler = (event) => {
 
 const beforeUnloadHandler = (event) => {
     event.preventDefault()
-    localStorage.setItem('todos', JSON.stringify(getTodos()))
+    localStorage.setItem('todos', JSON.stringify(getTodos())) // แปลง JS object เป็น string
     clearTodo()
 }
 
 const loadHandler = () => {
     const localTodos = localStorage.getItem('todos')
-    const yourTodos = JSON.parse(localTodos)
+    const yourTodos = JSON.parse(localTodos) // แปลง string กลับเป็น JS object
 
     if (
         yourTodos !== null &&
