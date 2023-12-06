@@ -8,14 +8,16 @@ const products = require('./data/products.js')
 function itemList(userItems) {
   const items = userItems
 
+  // หน้าเริ่มต้น page
   const initialPage = () => {
     const input = document.querySelector('input')
     input.addEventListener('input',filterItemsHandler)
     showItems(items)
   }
 
+  // search bar ตามเงื่อนไข
   const filterItemsHandler = (event) => {
-    const inputValue = event.target.value.toLowerCase()
+    const inputValue = event.target.value.toLowerCase() // ไม่สนใจตัวพิมพ์เล็ก-ใหญ่
     const filter = items.filter((product) =>
         product.keywords.toLowerCase().includes(inputValue))
     showItems(filter)
