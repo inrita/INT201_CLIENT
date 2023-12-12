@@ -32,6 +32,7 @@ class Person {
         )
     }
 
+    // return a string representing fullname and age
     toString() {
         return `FullName: ${this.getFullName()} , age: ${this.getAge()}`
     }
