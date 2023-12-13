@@ -40,6 +40,7 @@ class Movies {
 
   updateMovie(title, updatedDetails) {
     // Find the movie by title (case insensitive)
+    // () => เข้าถึง property ใน array นั้น === ตัวที่รับค่า parameter เข้ามา
     const findIndexByTitle = this.movies.findIndex((movie) => movie.title.toLowerCase() === title.toLowerCase())
     if (findIndexByTitle !== -1) { //เจอ title สามารถ updatedDetails ได้
       // เข้าถึงชื่อ array[ตำแหน่ง index ที่ต้องการเข้าถึง] และก็เข้าถึง .property ใน object นั้น = update ค่า หรือ ถ้าไม่ได้อัปเดตให้คืนค่าที่มีอยู่ใน array
