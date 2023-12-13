@@ -42,7 +42,7 @@ class Movies {
     // Find the movie by title (case insensitive)
     const findIndexByTitle = this.movies.findIndex((movie) => movie.title.toLowerCase() === title.toLowerCase())
     if (findIndexByTitle !== -1) { //เจอ title สามารถ updatedDetails ได้
-      // เข้าถึงชื่อ array และก็เข้าถึง property ใน object นั้น = update ค่า หรือ ถ้าไม่ได้อัปเดตให้คืนค่าที่มีอยู่ใน array
+      // เข้าถึงชื่อ array[ตำแหน่ง index ที่ต้องการเข้าถึง] และก็เข้าถึง .property ใน object นั้น = update ค่า หรือ ถ้าไม่ได้อัปเดตให้คืนค่าที่มีอยู่ใน array
       this.movies[findIndexByTitle].year = updatedDetails.year || this.movies[findIndexByTitle].year
       this.movies[findIndexByTitle].director = updatedDetails.director || this.movies[findIndexByTitle].director 
       this.movies[findIndexByTitle].year = updatedDetails.year || this.movies[findIndexByTitle].year
